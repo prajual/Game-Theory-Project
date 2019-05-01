@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <style>
+                    body {background-color: rgb(255, 255, 255);}
+                    h1   {color: rgb(0, 0, 0);}
+                    p    {color: rgb(0, 0, 0);}
+
+                    div.relative{position: relative; top: 20px; left: 200px; width: 1000px; height: 90px; border: 3px solid rgb(0, 0, 0);}
+
+                    h2 { color: rgb(134, 133, 133);font-family:'Gill Sans', 'Gill Sans MT';position: center;width:1420px;height: 36px; text-align:center; border-bottom: 1px solid rgb(214, 211, 211); line-height:3em; margin:10px 0 20px; } 
+                    h2 span { background:#fff; padding:0 10px; }
+
+                </style>
+
+                <meta name="viewport" content="width=20px">
+                <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                <script src="https://code.jquery.com/jquery-1.11.3.min.js">
+                </script>
+                <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+                </script>
+
+                
+        </head>
+
+<body>
+    <h1 style="font-family:verdana; text-align:center;">Welcome to the Game</h1>
+    <p style="font-family:verdana; text-align:center">Rules&#58; You will be engaging in 100 rounds of trade with an opponent. In each round, you and your trade partner can either cooperate (allow free trade) or defect (impose a tariff). Your goal is to pick a strategy that earns you as much as possible. 
+        <div class ="relative">  
+            <ul style="font-family:verdana;">
+                <li>If you both cooperate in a given round, you each earn $15.</li>  
+                <li>If you both defect, you each earn only $10.</li>
+                <li>If one of you cooperates and the other defects, the defector earns $25 while the cooperator earns only $5.</li>
+            </ul>
+        </div>
+    </p>
+
+    <h2><span>Create a custom strategy</span></h2>
+    
+
+
+    </div>
+        
+        <div data-role="main" class="ui-content">
+            <form action= "{% url 'ad1' %}" method="POST">
+                <h3>Player 1</h3>
+                <label for="points">friendliness:</label>
+                <input type="range" name="friendliness_1" min="0" max="100" data-show-value="true">
+
+                <label for="points">imitation:</label>
+                <input type="range" name="imitation_1" min="0" max="100" data-show-value="true">
+
+                <label for="points">vindictiveness:</label>
+                <input type="range" name="vindictiveness_1" min="0" max="100" data-show-value="true">
+            
+
+                <h3>Player 2</h3>
+                <label for="points">friendliness:</label>
+                <input type="range" name="friendliness_2" min="0" max="100" data-show-value="true">
+
+                <label for="points">imitation:</label>
+                <input type="range" name="imitation_2" min="0" max="100" data-show-value="true">
+
+                <label for="points">vindictiveness:</label>
+                <input type="range" name="vindictiveness_2" min="0" max="100" data-show-value="true">
+
+                <input type="submit" value="Play" id="toggle1" />
+	{% csrf_token %}
+            </form>
+        </div>
+    </div>
+
+
+    </div>
+        
+
+        </div>
+    </div>
+
+
+
+<!-- <script src="testing11.js"> 
+</script> -->
+
+</body>
+</html>

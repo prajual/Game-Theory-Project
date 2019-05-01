@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Trade War Project</title>
+  </head>
+  <body>
+    <div class="strategy-container show">
+        <h1 class="hed">Can you win our trade game?</h1>
+        <div class="bullets">
+            <p class="bullet">I’ve simplified trade dramatically: You’re engaging in 100 rounds of trade with another
+                player. In each round, you and your trade partner can either cooperate (allow free trade) or
+                defect (impose a tariff). Your goal is to pick a strategy that earns you as much as possible.
+            </p>
+            <p class="bullet">If you both cooperate in a given round, you each earn <strong>$25 Bn</strong>.</p>
+            <p class="bullet">If you both defect, you each earn only <strong>$15 Bn</strong>.</p>
+            <p class="bullet">If one of you cooperates and the other defects, the <em>defector </em>earns <strong>$60 Bn </strong>while the <em>cooperator</em> earns only <strong>$5 Bn</strong>.</p>
+        </div>
+	<form action= "{% url 'nam1' %}" method="POST">
+        <div class="section-head-wrap">
+            <div class="rule"></div>
+        </div>
+        <div class="sliders section">
+            <div class="slider-wrap" data-rate="cooperationRate"><h3 class="slider-title">Friendliness</h3>
+                <p class="slider-explainer">As a baseline, how often will you cooperate, allowing free trade between your country and your opponent’s?</p>
+                <p class="slider-head"></p>
+                <div class="input-wrap">
+                    Player 1
+                    <div class="sliderBar"></div>
+                    <div class="tooltip">
+                        <input type="text" name="a"><br>
+                    </div>
+            </div>
+            <div class="input-wrap">
+                    Player 2
+                    <div class="sliderBar"></div>
+                    <div class="tooltip">
+                        <input type="text" name="d"><br>
+                    </div>
+            </div>
+            <div class="slider-wrap" data-rate="respondRate"><h3 class="slider-title">Strictness</h3>
+                <p class="slider-explainer">Once trade begins, your opponent’s policy could be unpredictable. How often will you abandon your friendliness and use your grudge to make out any decision, whether to punish or not.</p>
+                <p class="slider-head"></p>
+                <div class="input-wrap">
+                    Player 1
+                    <div class="sliderBar"></div>
+                    <div class="tooltip">
+                       <input type="text" name="b"><br>
+                    </div>
+            </div>
+            <div class="input-wrap">
+                    Player 2
+                    <div class="sliderBar"></div>
+                    <div class="tooltip">
+                       <input type="text" name="e"><br>
+                    </div>
+            </div>
+            <div class="slider-wrap" data-rate="punishRate"><h3 class="slider-title">Vindictiveness</h3>
+                <p class="slider-explainer">If you’re crossed by an unkind, defecting opponent who imposes tariffs on your goods, how long (as a percentage of the remaining rounds) do you hold a grudge, putting your other strategies aside to punish the other country by defecting yourself?</p>
+                <p class="slider-head"></p>
+                <div class="input-wrap">
+                    Player 1
+                    <div class="sliderBar"></div>
+                    <div class="tooltip">
+                       	   <input type="text" name="c"><br>
+                    </div>
+                </div>
+                <div class="input-wrap">
+                        Player 2
+                        <div class="sliderBar"></div>
+                        <div class="tooltip">
+                                  <input type="text" name="f"><br>
+                        </div>
+                    </div>
+	<input type="submit" value="Naman" id="toggle1" />
+	{% csrf_token %}
+      </form>
+            </div>
+ </body>
+</html>

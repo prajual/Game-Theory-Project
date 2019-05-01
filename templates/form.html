@@ -1,0 +1,83 @@
+<html>
+<body style="background-color:powderblue;">
+ <div class="text">
+<center>
+<a href="http://www.iitk.ac.in/eco/" target="_blank"><h2 class="start">Econs Project</h2></a>
+<br>
+<a href="http://home.iitk.ac.in/~prajual/" target="_blank"><h2 class="start">Mentored by - Prajual Maheshwari</h2></a>
+</div>
+</center>
+<br>
+<div>Click to Run the Aditya's Game:
+      <form action= "{% url 'ad1' %}" method="POST">
+	   <input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Aditya" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Arzoo's Game:
+      <form action= "{% url 'ar1' %}" method="POST">
+	   <input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Arzoo" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Gurasheesh's Game:
+      <form action= "{% url 'gu1' %}" method="POST">
+	<input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="gurasheesh" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Jay's Game:
+      <form action= "{% url 'ja1' %}" method="POST">
+	<input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Jay" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Maisam's Game:
+      <form action= "{% url 'ma1' %}" method="POST">
+	<input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Maisam" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Muskan's Game:
+      <form action= "{% url 'mu1' %}" method="POST">
+	   <input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Muskan" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Namam's Game:
+      <form action= "{% url 'nam1' %}" method="POST">
+           <input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Naman" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Ritika's Game:
+      <form action= "{% url 'ri1' %}" method="POST">
+	<input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Ritika" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+<div>Click to Run the Saurabh's Game:
+      <form action= "{% url 'sa1' %}" method="POST">
+	<input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="Saurabh" id="toggle1" />
+	{% csrf_token %}
+      </form>
+    </div>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("https://fee.org/media/29969/uschinatradewar.jpg?center=0.5225,0.49833333333333335&mode=crop&width=1920&rnd=131810530440000000");
+  background-color: #cccccc;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position :relative
+}
+
+.hero1-text {
+  text-align: centre;
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  
+  color: white;
+}
+.hero2-text {
+  text-align: centre;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  color: white;
+}
+
+</style>
+<title>
+    Game theory Simulator
+</title>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero1-text">
+  <form action= "{% url 'ar1' %}" method="POST">
+  Behaviour:<br>
+  <input type="text" name="firstname"><br>
+  p1:<br>
+  <input type="number" name="a1" style="margin:0px;"><br>
+  p2:<br>
+  <input type="number" name="a2" style="margin:0px;"><br>
+  p3:<br>
+  <input type="number" name="a3" style="margin:0px;"><br>
+  p4:<br>
+  <input type="number" name="a4" style="margin:0px;"><br>
+  </form>
+    <button style="margin:5px; left:90%" >
+          Submit
+      </button>
+  </div>
+  <div class="hero2-text">
+  Behaviour:<br>
+  <input type="text" name="secondname"><br>
+  p1:<br>
+  <input type="number" name="p1" style="margin:0px;"><br>
+  p2:<br>
+  <input type="number" name="p2" style="margin:0px;"><br>
+  p3:<br>
+  <input type="number" name="p3" style="margin:0px;"><br>
+  p4:<br>
+  <input type="number" name="p4" style="margin:0px;"><br>
+  <input type="submit" value="Submit" id="toggle1" />
+  {% csrf_token %}
+  </form>
+  </div>
+</div>
+<p >Click <a href="https://drive.google.com/open?id=168V-bt445ppl2EQSV8trPsweBBgpJf-8">here</a> to know about game.</p>
+
+</body>
+</html>
+
+

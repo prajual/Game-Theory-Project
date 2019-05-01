@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title> Jay's Game </title>
+
+    <h1>
+        Can you win our trade game?
+    </h1>
+    <div style="width:1500px; margin:0 auto;">
+        <h3> You have to enter following details</h3>
+        <p>
+            <h2>Friendliness</h2>
+            <b>How much you would like to cooperate</b>
+        <p>As a baseline, how often (as a percentage of all rounds) will you cooperate, allowing free trade between your country and your opponent’s?</p>
+        </p>
+    </div>
+    <div>
+        <p>
+            <h2>Imitation</h2>
+            <b>How much you will you change your strategy derived from other's strategy</b>
+        <p>
+            Once trade begins, your opponent’s policy could be unpredictable. How often (as a percentage of all rounds) will you abandon your baseline strategy to mimic their actions, responding to them in kind?
+
+        </p>
+        </p>
+    </div>
+    <div>
+        <p>
+            <h2>Vindictiveness</h2>
+            <b>How much you will take revenge </b>
+        <p>
+            If you’re crossed by an unkind, defecting opponent who imposes tariffs on your goods, how long (as a percentage of the remaining rounds) do you hold a grudge, putting your other strategies aside to punish the other country by defecting yourself?
+
+        </p>
+        </p>
+    </div>
+    <form action= "{% url 'nam1' %}" method="POST">
+        <div class="form-group">
+            <h4>Player 1</h4>
+            <label for="exampleInputEmail1">Friendliness</label>
+            <input type="text" class="form-control" id="a" aria-describedby="emailHelp" placeholder="Enter Friendliness for Player 1">
+            <label for="exampleInputEmail1">Imitation</label>
+            <input type="text" class="form-control" id="y1" aria-describedby="emailHelp" placeholder="Enter Imitatons for Player 1">
+            <label for="exampleInputEmail1">Vindictiveness</label>
+            <input type="text" class="form-control" id="z1" aria-describedby="emailHelp" placeholder="Enter Vindictiveness for Player 1">
+            <small id="emailHelp" class="form-text text-muted">By this we will create Player 1's Strategy </small>
+        </div>
+        <h4>Player 2</h4>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Friendliness</label>
+            <input type="text" class="form-control" id="b" aria-describedby="emailHelp" placeholder="Enter Friendliness for Player 2">
+            <label for="exampleInputEmail1">Imitation</label>
+            <input type="text" class="form-control" id="y2" aria-describedby="emailHelp" placeholder="Enter Imitatons for Player 2">
+            <label for="exampleInputEmail1">Vindictiveness</label>
+            <input type="text" class="form-control" id="z2" aria-describedby="emailHelp" placeholder="Enter Vindictiveness for Player 2">
+            <small id="emailHelp" class="form-text text-muted">By this we will create Player 1's Strategy </small>
+        </div>
+        <!button type="submit" class="btn btn-primary">Submit<!/button>
+        <input type="submit" value="Submit" id="toggle1" />
+	{% csrf_token %}
+    </form>
+</head>
+<body>
+
+</body>
+</html>

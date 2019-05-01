@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<TITLE> MY GAME</TITLE>
+<BODY>
+<h1> The Game of Trades</h1>
+<p>
+        Country indices</br></br> 
+1 -> India</br></br>
+2 -> USA</br></br>
+3 -> Japan</br></br>
+4 -> Pakistan</br></br>
+</p>
+<form action= "{% url 'uda1' %}" method="POST">
+	   <input type="text" name="a"><br>
+	   <input type="text" name="b"><br>
+           <input type="submit" value="My-game" id="toggle1" />
+	{% csrf_token %}
+      </form>
+</BODY>
+</HEAD>
+</HTML>
